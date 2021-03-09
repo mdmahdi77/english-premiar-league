@@ -1,0 +1,32 @@
+
+.team-section{
+    margin: 0 auto;
+}
+.team-container{
+    overflow:hidden;
+    float: left;
+    margin: 0 auto;
+}
+.team{
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(248, 241, 241);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.team img{
+    height: 195px;
+}
+.mainBtn{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.mainLink{
+    text-decoration: none;
+}
+.sport-type{
+    
+}
