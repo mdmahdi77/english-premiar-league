@@ -20,7 +20,7 @@ const Home = () => {
                 </div>
             </div>
             {
-                teams.map(team => <Teams team={team}></Teams>)
+                teams.map(team => <Teams key={team.idTeam} team={team}></Teams>)
             }
         </div>
     );

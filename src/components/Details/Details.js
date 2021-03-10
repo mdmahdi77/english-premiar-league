@@ -15,11 +15,11 @@ const Details = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setTeam(data.teams[0]))
-    },[])
+    },[idTeam])
 
 
     // Destructuring
-    const{strTeam, intFormedYear, strSport, strCountry, strGender, strTeamBadge, strStadiumThumb, strStadiumDescription, strDescriptionEN, strTeamFanart3, strTwitter, strYoutube, strFacebook} = team
+    const {strTeam, intFormedYear, strSport, strCountry, strGender, strTeamBadge, strStadiumThumb, strStadiumDescription, strDescriptionEN, strTeamFanart3} = team
 
 
     // Conditional rendering
