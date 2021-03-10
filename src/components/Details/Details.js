@@ -55,9 +55,9 @@ const Details = () => {
                 <p>{strStadiumDescription}</p>
                 <p>{strDescriptionEN}</p>
                 <div className="social-icon">
-                    <a href={strTwitter} target="_blank"><img src={facebook} alt=""/></a>
-                    <a href={strFacebook} target="_blank"><img src={twitter} alt=""/></a>
-                    <a href={strYoutube} target="_blank"><img src={Youtube} alt=""/></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src={facebook} alt=""/></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src={twitter} alt=""/></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src={Youtube} alt=""/></a>
                 </div>
                     <Link className="go-back" to="/">Go Back</Link>
             </div>
