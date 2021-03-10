@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import facebook from '../../Icon/Facebook.png'
+import twitter from '../../Icon/Twitter.png'
+import Youtube from '../../Icon/YouTube.png'
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import './Details.css'
@@ -14,30 +17,36 @@ const Details = () => {
         .then(data => setTeam(data.teams[0]))
     },[])
 
-    const{strTeam, intFormedYear, strSport, strCountry, strGender, strStadium, strStadiumThumb, strStadiumDescription, strDescriptionEN} = team
 
+    // Destructuring
+    const{strTeam, intFormedYear, strSport, strCountry, strGender, strTeamBadge, strStadiumThumb, strStadiumDescription, strDescriptionEN, strTeamFanart3, strTwitter, strYoutube, strFacebook} = team
+
+
+    // Conditional rendering
     let genderChange;
-    if(strGender == 'female'){
+    if(strGender === 'female'){
         genderChange = <img src="https://www.worldsoccer.com/wp-content/uploads/2019/10/GettyImages-1153124570.jpg" />
     }else{
-        genderChange = <img src="https://img.fifa.com/image/upload/t_l4/v1581117518/lxnih3mmbd4ucvm7pwt1.jpg" />
+        genderChange = <img src={strTeamFanart3} />
     }
+
+
     return (
         <div>
-            <div className="banner">
+            <div className="banner-two">
                 <img src={strStadiumThumb} alt=""/>
-                <div>
-                    <h1>{strStadium}</h1>
+                <div className="logo">
+                    <img src={strTeamBadge} alt=""/>
                 </div>
             </div>
             <div className="details">
                 <div className="Details-info">
                     <div className="team-details">
                         <h2>{strTeam}</h2>
-                        <h6>Founded: {intFormedYear}</h6>
-                        <h6>Sport Types: {strSport}</h6>
-                        <h6>Country: {strCountry}</h6>
-                        <h6>Gender: {strGender}</h6>
+                        <h5>Founded: <span>{intFormedYear}</span></h5>
+                        <h5>Sport Types: <span>{strSport}</span></h5>
+                        <h5>Country: <span>{strCountry}</span></h5>
+                        <h5>Gender: <span>{strGender}</span></h5>
                     </div>
                     <div className="team-img">
                         {genderChange}
@@ -46,10 +55,12 @@ const Details = () => {
                 <p>{strStadiumDescription}</p>
                 <p>{strDescriptionEN}</p>
                 <div className="social-icon">
-                    <a href=""><img src="" alt=""/></a>
+                    <a href={strTwitter} target="_blank"><img src={facebook} alt=""/></a>
+                    <a href={strFacebook} target="_blank"><img src={twitter} alt=""/></a>
+                    <a href={strYoutube} target="_blank"><img src={Youtube} alt=""/></a>
                 </div>
+                    <Link className="go-back" to="/">Go Back</Link>
             </div>
-            <Link to="/">Go Back</Link>
         </div>
     );
 };

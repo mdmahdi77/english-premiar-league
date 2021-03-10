@@ -1,5 +1,4 @@
 .details{
-    width: 900px;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -12,8 +11,23 @@
     padding: 20px;
     border-radius: 14px;
 }
+.team-details h2{
+    color: teal;
+    font-family: serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.team-details h5{
+    font-family: serif;
+    font-size: 20px;
+    color: lightseagreen;
+}
+.team-details span{
+    color: gray;
+}
 .team-img img{
-    height: 150px;
+    height: 400px;
+    width: 700px;
     border-radius: 10px;
 }
 p{
@@ -23,4 +37,45 @@ p{
     padding: 20px;
     border-radius: 14px;
     background-color: rgb(228, 221, 221);
+}
+.banner-two{
+    height: 300px;
+    width: 100%;
+    background: black;
+}
+
+.banner-two img {
+   object-fit: cover;
+   width: 100%;
+   height: 300px;
+}
+.logo img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    z-index: 1111;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icon img{
+    height: 60px;
+}
+.go-back-style{
+    
+}
+.go-back{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    background-color: crimson;
+    padding: 8px 30px;
+    border-radius: 20px;
 }

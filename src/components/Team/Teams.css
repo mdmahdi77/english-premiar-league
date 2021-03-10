@@ -14,19 +14,48 @@
     border-radius: 10px;
     padding: 50px;
 }
-
 .team img{
     height: 195px;
+}
+.team h3{
+    color: teal;
+    font-family: serif;
+}
+.team h5{
+    color: gray;
+    font-family: serif;
+    font-weight: 100;
 }
 .mainBtn{
     width: 150px;
     height: 30px;
     border-radius: 10px;
+    border: none;
     cursor: pointer;
+    background-color: crimson;
+    
 }
 .mainLink{
     text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
 }
-.sport-type{
-    
+
+
+@media (max-width: 1340px){
+    .team-section{
+        margin-left: 100px;
+    }
+}
+@media (max-width: 1104px){
+    .team-section{
+        margin-left: 200px;
+    }
+}
+@media (max-width: 870px){
+    .team-section{
+        display: block;
+        margin: 0 auto;
+    }
 }
